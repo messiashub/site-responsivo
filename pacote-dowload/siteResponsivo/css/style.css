@@ -1,0 +1,267 @@
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+header{
+    background-color: #000;
+    width: 100%;
+    height: 60px;
+}
+
+.logo-parent{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+}
+.logo-parent img{
+    height: 90%;
+}
+
+.menu {
+    width: 90%;
+    height: 100%;
+    float: right;
+}
+.menu ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content:flex-end;
+    
+}
+
+.menu ul li{
+    font-family:"Roboto" ;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu ul li:hover{
+    border-bottom: 3px solid #e5dcdc;
+    transition: .7s;
+
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+}
+.menu ul li a:hover{
+    color: #e5dcdc;
+}
+
+/*CONTAINER BACKGROUND*/
+.container-background{
+    width: 100%;
+    height: 95vh;
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-color: rgba(0,0,0, .75);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-background div{
+    width: 80%;
+    text-align: center;
+}
+
+.container-background div h1{
+    font-family:"Teko",sans-serif ;
+    text-shadow: #000 3px 2px 3px;
+    font-size: 8em;
+    color: #fff;
+}
+
+.container-background div a{
+    font-family: "Roboto";
+    text-decoration: none;
+    transition: all .5s ease;
+    color: #fff;
+    background: #53019b;
+    padding:15px 40px;
+    border: 0.2px groove #fff;
+    border-radius: 20px;
+}
+.container-background div a:hover{
+    left: 0;
+    top: 0;
+    background: #770ad6;
+}
+/* CONTENT */
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+}
+.content{
+    width: 90%;
+    height: 100%;
+    padding: 50px 0;
+}
+.content h2{
+    text-align: center;
+    font-size: 3em;
+    font-family: "teko","Roboto",sans-serif;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cards-shadow{
+    margin: 0 10px;
+    width: 30%;
+    padding: 30px;
+    text-align: center;
+    min-height: 250px;
+    height: 250px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0, .14) ,0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,12);
+}
+.cards-shadow span{
+    font-family: "Roboto";
+}
+.cards-shadow img{
+    width: 128px;
+}
+
+/* PARALLAX*/
+
+.parallax{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(/img/code.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .35);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+.parallax span{
+    display: flex;
+    font-size: 4em;
+    color: #fff;
+    
+    font-family: "Roboto";    
+}
+/*Animação*/
+[data-anima]{
+    opacity:0 ;
+    transition: 2s;
+}
+[data-anima="direita"]{
+    transform: translate3d(0,0,0); /*x,y,z*/
+}
+
+[data-anima].animacao{
+    opacity: 1;
+    color: rgb(213, 245, 246);
+    transform: translate3d(-1250px,0,0);
+}
+
+
+/* PORTFOLIOS*/
+
+.portfolios, .img-row-1{
+    width: 100%;
+}
+.portfolios div figure{
+    width: 33%;
+    height: 300px;
+    overflow: hidden;
+}
+.portfolios div figure:hover img{
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+
+}
+
+.portfolios div img{
+    height: 330px;
+    width: 100%;
+    -webkit-transform: rotate(15deg) scale(1.4);
+    transform: rotate(15deg) scale(1.4);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.portfolios div{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    height: 80px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer b{
+    color: blueviolet;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+#link-topo button{
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: #ffff ;
+    background-color: #770ad6;
+    border: none;
+    font-family: "Roboto";
+
+}
+
+#link-topo button:hover{
+    cursor: pointer;
+}
+
+/* MEDIA QUERY*/
+@media screen and (max-width:734px){
+    .cards{flex-wrap: wrap;}
+    .card div{
+        width: 90%;
+        margin: 5px 0;}
+    .parallax span{
+        text-align: center;}
+    .portfolios div{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    .portfolios div figure{
+        width: 90%;
+        justify-content: center;
+    }
+}
