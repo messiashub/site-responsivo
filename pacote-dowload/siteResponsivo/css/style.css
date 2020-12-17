@@ -7,6 +7,9 @@
     padding: 0;
     outline: none;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 
 header{
@@ -175,7 +178,7 @@ header{
 [data-anima].animacao{
     opacity: 1;
     color: rgb(213, 245, 246);
-    transform: translate3d(-1250px,0,0);
+    transform: translate3d(-1120px,0,0);
 }
 
 
